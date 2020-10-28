@@ -73,3 +73,49 @@ Buster dog
 Shih-tzu is owned by Christy
 (10 points) 
 """
+
+class pet:
+    animal= None
+    breed= None
+    name = None
+    owner = None
+    birthdate = None
+    def __init__(self):
+
+        self.animal= input("Type of animal? : ")
+        self.breed= input("what breed? : ")
+        self.name = input("enter animal name: ")
+        self.owner = input("enter your name: ")
+        self.birthdate = input("enter animal birthdate(in the form of yyyy-mm-dd): ")
+    def display(self):
+        print(self.name+' '+self.animal)
+        print(self.breed+' is owned by '+self.owner)
+
+pets=[]
+
+def main():
+    print('1. Enter a new pet')
+    print('2. Retrieve a pet')
+    print('3. Exit')
+
+    while True:
+        pets.append(pet())
+        a=input('which service do you want? : ')
+        if a=='1':
+            pet()
+            continue
+        elif a=='2':
+            b=input("which pet? : ")
+            if pets.count(b) > 0:
+                # you need to find the index so you can use it 
+                i=pets.index(b)
+                pets[i].display()
+                continue
+            else:
+                print("animal does not exist")
+                continue
+        else:
+            break
+
+main()
+
