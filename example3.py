@@ -59,4 +59,4 @@ for i in range(0,3):
 # and we can use the list with its index to access object properties
 # or methods
 print( cars[0].make )
-print( cars[1].curvalue() )
+print( cars[1].curvalue(2020) )

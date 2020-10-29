@@ -75,13 +75,13 @@ Shih-tzu is owned by Christy
 """
 
 class pet:
-    animal= None
-    breed= None
-    name = None
-    owner = None
-    birthdate = None
-    def __init__(self):
+    animal= ''
+    breed= ''
+    name = ''
+    owner = ''
+    birthdate = ''
 
+    def __init__(self):
         self.animal= input("Type of animal? : ")
         self.breed= input("what breed? : ")
         self.name = input("enter animal name: ")
@@ -93,29 +93,23 @@ class pet:
 
 pets=[]
 
-def main():
-    print('1. Enter a new pet')
-    print('2. Retrieve a pet')
-    print('3. Exit')
+print('1. Enter a new pet')
+print('2. Retrieve a pet')
+print('3. Exit')
 
-    while True:
+i=0
+while True:
+    a=input('which service do you want? : ')
+    if a=='1':
         pets.append(pet())
-        a=input('which service do you want? : ')
-        if a=='1':
-            pet()
-            continue
-        elif a=='2':
-            b=input("which pet? : ")
-            if pets.count(b) > 0:
-                # you need to find the index so you can use it 
-                i=pets.index(b)
-                pets[i].display()
-                continue
-            else:
-                print("animal does not exist")
-                continue
-        else:
-            break
-
-main()
+        print(pets)
+        continue
+    elif a=='2':
+        b=input("which pet? : ")
+        for i in pets:
+            idx=pets.index(i)
+            if b == i.name:
+                pets[idx].display()
+    else:
+        break
 
