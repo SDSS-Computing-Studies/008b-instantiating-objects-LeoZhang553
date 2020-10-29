@@ -93,16 +93,15 @@ class pet:
 
 pets=[]
 
-print('1. Enter a new pet')
-print('2. Retrieve a pet')
-print('3. Exit')
 
 i=0
 while True:
-    a=input('which service do you want? : ')
+    print('1. Enter a new pet')
+    print('2. Retrieve a pet')
+    print('3. Exit')
+    a=input(' ')
     if a=='1':
         pets.append(pet())
-        print(pets)
         continue
     elif a=='2':
         b=input("which pet? : ")
