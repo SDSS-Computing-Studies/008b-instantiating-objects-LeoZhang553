@@ -98,11 +98,11 @@ while True:
     print('1. Enter a new pet')
     print('2. Retrieve a pet')
     print('3. Exit')
-    a=input('').strip()
-    if a=='1':
+    a=int(input('').strip())
+    if a==1:
         pets.append(pet())
         continue
-    elif a=='2':
+    elif a==2:
         b=input("which pet? : ")
         for i in pets:
             idx=pets.index(i)
