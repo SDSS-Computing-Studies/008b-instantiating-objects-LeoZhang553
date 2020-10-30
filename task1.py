@@ -93,13 +93,12 @@ class pet:
 
 pets=[]
 
-
 i=0
 while True:
     print('1. Enter a new pet')
     print('2. Retrieve a pet')
     print('3. Exit')
-    a=input(' ')
+    a=input('')
     if a=='1':
         pets.append(pet())
         continue
@@ -109,6 +108,7 @@ while True:
             idx=pets.index(i)
             if b == i.name:
                 pets[idx].display()
+                break
     else:
         break
 
