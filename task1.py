@@ -98,7 +98,7 @@ while True:
     print('1. Enter a new pet')
     print('2. Retrieve a pet')
     print('3. Exit')
-    a=input('')
+    a=input('').strip()
     if a=='1':
         pets.append(pet())
         continue
